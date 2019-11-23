@@ -1,0 +1,174 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "table service",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "DeliverSpice",
+                  "slots": [
+                      {
+                          "name": "Spice",
+                          "type": "SpiceType"
+                      }
+                  ],
+                  "samples": [
+                      "{Spice}",
+                      "give me {Spice}",
+                      "hand over {Spice}",
+                      "move {Spice} for me"
+                  ]
+              },
+              {
+                  "name": "MoveIntent",
+                  "slots": [
+                      {
+                          "name": "Direction",
+                          "type": "DirectionType"
+                      },
+                      {
+                          "name": "Duration",
+                          "type": "AMAZON.NUMBER"
+                      }
+                  ],
+                  "samples": [
+                      "{Direction} now",
+                      "{Direction} {Duration} seconds",
+                      "move {Direction} for {Duration} seconds"
+                  ]
+              },
+              {
+                  "name": "SetSpeedIntent",
+                  "slots": [
+                      {
+                          "name": "Speed",
+                          "type": "AMAZON.NUMBER"
+                      }
+                  ],
+                  "samples": [
+                      "set speed {Speed} percent",
+                      "set {Speed} percent speed",
+                      "set speed to {Speed} percent"
+                  ]
+              },
+              {
+                  "name": "SetCommandIntent",
+                  "slots": [
+                      {
+                          "name": "Command",
+                          "type": "CommandType"
+                      }
+                  ],
+                  "samples": [
+                      "activate {Command} mode",
+                      "move in a {Command}",
+                      "fire {Command}",
+                      "activate {Command}"
+                  ]
+              }
+          ],
+          "types": [
+              {
+                  "name": "SpiceType",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "Salt"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "Pepper"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "Lemon"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "HotStuff"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "DirectionType",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "brake"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "go backward"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "go forward"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "go right"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "go left"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "right"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "left"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "backwards"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "backward"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "forwards"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "forward"
+                          }
+                      }
+                  ]
+              }}
+          ]
+      }
+  }
+}
